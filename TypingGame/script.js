@@ -54,6 +54,24 @@ const words = [
     'sentence',
     'over',
     'leaving',
+    'levitating',
+    'dualipa',
+    'aurora',
+    'illegel',
+    'saturday',
+    'austin',
+    'business',
+    'plastic',
+    'material',
+    'aluminum',
+    'eighteenth',
+    'movement',
+    'synthetic',
+    'traditional',
+    'manufacture',
+    'wood',
+    'bone',
+    'superhero'
   ];
   
   // Init word
@@ -63,7 +81,7 @@ let randomWord;
 let score = 0;
 
 // Init time
-let time = 10;
+let time = 20;
 
 // Set difficulty to value in ls or medium
 let difficulty =
@@ -117,7 +135,7 @@ function gameOver() {
   endgameEl.innerHTML = `
     <h1>Time ran out</h1>
     <p>Your final score is ${score}</p>
-    <button onclick="location.reload()">Reload</button>
+    <button onclick="location.reload()">Play again</button>
   `;
 
   endgameEl.style.display = 'flex';
@@ -139,11 +157,11 @@ text.addEventListener('input', e => {
     e.target.value = '';
 
     if (difficulty === 'hard') {
-      time += 2;
+      time += 1;
     } else if (difficulty === 'medium') {
-      time += 3;
+      time += 2;
     } else {
-      time += 5;
+      time += 3;
     }
 
     updateTime();
